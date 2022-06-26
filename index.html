@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>私は人間???</title>
+    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'your_site_key'
+        });
+      };
+    </script>
   </head>
   <body>
-    <h1>私は人間???</h1>
-    <p>Yoidea/ラムダ技術部さん参考</p>
+    <form action="?" method="POST">
+      <div id="html_element"></div>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
   </body>
 </html>
