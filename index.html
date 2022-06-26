@@ -1,22 +1,13 @@
 <html>
   <head>
-    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
-    <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          '6Lch1p4gAAAAAFaUpLuEK2hUz9ce57q6P29b3VRY' : '6Lch1p4gAAAAAFaUpLuEK2hUz9ce57q6P29b3VRY'
-        });
-      };
-    </script>
+    <title>私は人間??</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <form action="?" method="POST">
-      <div id="html_element"></div>
-      <br>
+      <div class="g-recaptcha" data-sitekey="6Lch1p4gAAAAAFaUpLuEK2hUz9ce57q6P29b3VRY"></div>
+      <br/>
       <input type="submit" value="Submit">
     </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
   </body>
 </html>
